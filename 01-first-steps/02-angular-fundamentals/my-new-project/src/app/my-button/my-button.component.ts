@@ -12,6 +12,6 @@ export class MyButtonComponent {
   }
 
   filtrar() {
-    console.log('Método limpar');
+    console.log('Método filtrar');
   }
 }
