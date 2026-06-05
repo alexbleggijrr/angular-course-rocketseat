@@ -5,7 +5,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   imports: [],
   template: `
     <button class="btn btn-flat" (click)="limpar()">
-      Limpar filtro {{ counter }}
+      Limpar filtro {{ counter }} {{ myCounter() }}
     </button>
   `,
   styles: `
@@ -31,7 +31,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
     }
   `,
 })
-export class ButtonFlatComponent {
+export class ButtonFlatComponent implements OnDestroy, OnInit {
   // 01. fazer injeções de dependência
   // 02. criar propriedades
   // 03. criar métodos
@@ -48,14 +48,20 @@ export class ButtonFlatComponent {
   // private readonly counter = 0;
 
   // 03. métodos
+  /* private limpar() {
+    console.log('Método limpar');
+  } */
+
   limpar() {
     this.counter += 1;
 
     console.log('Método limpar');
   }
-  /* private limpar() {
-    console.log('Método limpar');
-  } */
+
+  myCounter() {
+    this.counter += 1;
+    return this.counter;
+  }
 
   // 04. utilizar ciclos de vida do componente
   ngOnInit() {
