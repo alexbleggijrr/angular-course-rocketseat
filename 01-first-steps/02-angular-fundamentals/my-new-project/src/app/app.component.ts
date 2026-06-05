@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { EventBindingComponent } from './event-binding/event-binding.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 @Component({
   selector: 'app-root',
-  imports: [EventBindingComponent],
+  imports: [PropertyBindingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
