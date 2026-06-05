@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button-flat',
   imports: [],
   template: `
-    <button class="btn btn-flat" (click)="limpar()">Limpar filtro</button>
+    <button class="btn btn-flat" (click)="limpar()">
+      Limpar filtro {{ counter }}
+    </button>
   `,
   styles: `
     .btn {
@@ -30,7 +32,38 @@ import { Component } from '@angular/core';
   `,
 })
 export class ButtonFlatComponent {
+  // 01. fazer injeções de dependência
+  // 02. criar propriedades
+  // 03. criar métodos
+  // 04. utilizar ciclos de vida do componente
+  // 05. passar valores para o template
+
+  // 01. injeções de dependência
+  // inject();
+  // constructor() {}
+
+  // 02. propriedades
+  counter = 0;
+  // private counter = 0;
+  // private readonly counter = 0;
+
+  // 03. métodos
   limpar() {
+    this.counter += 1;
+
     console.log('Método limpar');
+  }
+  /* private limpar() {
+    console.log('Método limpar');
+  } */
+
+  // 04. utilizar ciclos de vida do componente
+  ngOnInit() {
+    console.log('ngOnInit');
+  }
+
+  // 04. utilizar ciclos de vida do componente
+  ngOnDestroy() {
+    console.log('ngOnDestroy');
   }
 }
