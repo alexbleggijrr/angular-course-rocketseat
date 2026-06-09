@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonFlatComponent } from './button-flat.component';
+import { ActiveButtonComponent } from './active-button.component';
 
-describe('ButtonFlatComponent', () => {
-  let component: ButtonFlatComponent;
-  let fixture: ComponentFixture<ButtonFlatComponent>;
+describe('ActiveButtonComponent', () => {
+  let component: ActiveButtonComponent;
+  let fixture: ComponentFixture<ActiveButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ButtonFlatComponent]
+      imports: [ActiveButtonComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ButtonFlatComponent);
+    fixture = TestBed.createComponent(ActiveButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
