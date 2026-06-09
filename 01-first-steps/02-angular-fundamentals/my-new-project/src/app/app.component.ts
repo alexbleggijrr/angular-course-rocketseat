@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
+import { DynamicTextComponent } from './components/dynamic-text/dynamic-text.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { SquarePopupComponent } from './components/square-popup/square-popup.component';
 
 @Component({
   selector: 'app-root',
-  imports: [TwoWayDataBindingComponent],
+  imports: [DynamicTextComponent, ProgressBarComponent, SquarePopupComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
